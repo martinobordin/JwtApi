@@ -4,13 +4,10 @@
 
     public class ValuesController : ApiController
     {
-        // GET api/values
         [Authorize(Roles = "administrator")]
         public string Get()
         {
             return $"Hello {this.User.Identity.Name}!";
         }
-
-      
     }
 }
